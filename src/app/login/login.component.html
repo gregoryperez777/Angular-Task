@@ -1,0 +1,15 @@
+<form action="POST">
+  <label for="">
+    Nombre
+    <input [(ngModel)]="email" type="text" name="name" >
+  </label>
+  <br>
+  <label for="Password">
+    Password
+    <input [(ngModel)]="password" type="password" name="password">
+  </label>
+  <br>
+  <button (click)="login(email, password)">Login</button>
+</form>
+
+{{ data | json }}
