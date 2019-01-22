@@ -18,10 +18,17 @@ export class LoginComponent implements OnInit {
   }
 
   login(email: string, password:string): void {
-    this.loginService.postLogin(email,password)
+    this.loginService.requestLogin(email,password)
       .subscribe(response => {
         this.data = response;
-        console.log(this.data);
+        localStorage.setItem('token', response.token);
+      });
+  }
+
+  logout(): void {
+    this.loginService.requestLogout(this.loginService.getToken())
+      .subscribe(response => {
+        localStorage.clear();
       });
   }
 }
