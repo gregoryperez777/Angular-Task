@@ -1,0 +1,15 @@
+.sidebar {
+    width: 15%;
+    border: 2px solid green;
+    display: inline-table;
+    padding: 1%;
+    text-align: -webkit-center;
+}
+
+.item {
+    margin: 2%;
+}
+
+.item:hover {
+    background-color: #cfc1bd;
+}
